@@ -29,7 +29,7 @@ export function PrivyProvider({ children }: PrivyProviderProps) {
           theme: "dark",
           accentColor: "#00f5ff",
           logo: "/logo.svg",
-          landingHeader: "Connect to Azoth Protocol",
+          landingHeader: "Connect to Cipher Protocol",
           loginMessage: "Privacy-preserving DAO governance powered by FHE",
         },
         loginMethods: ["wallet", "email", "google"],

@@ -97,8 +97,8 @@ export default function AgentChatPage() {
       id: uuidv4(),
       role: "assistant",
       content: proposalContext
-        ? `Hello! I'm the Azoth DAO AI Advisor. I see you want to discuss a proposal:\n\n**${proposalTitle}**\n\n${proposalDescription ? proposalDescription.substring(0, 200) + "..." : ""}\n\nI can help you analyze this proposal, identify potential risks, suggest improvements, or answer any governance questions. What would you like to know?`
-        : "Hello! I'm the Azoth DAO AI Advisor. I can help you with:\n\n• Analyzing DAO proposals\n• Understanding governance mechanics\n• Risk assessment for voting decisions\n• Best practices for proposal creation\n\nHow can I assist you today?",
+        ? `Hello! I'm the Cipher DAO AI Advisor. I see you want to discuss a proposal:\n\n**${proposalTitle}**\n\n${proposalDescription ? proposalDescription.substring(0, 200) + "..." : ""}\n\nI can help you analyze this proposal, identify potential risks, suggest improvements, or answer any governance questions. What would you like to know?`
+        : "Hello! I'm the Cipher DAO AI Advisor. I can help you with:\n\n• Analyzing DAO proposals\n• Understanding governance mechanics\n• Risk assessment for voting decisions\n• Best practices for proposal creation\n\nHow can I assist you today?",
       timestamp: new Date(),
     };
     setMessages([greeting]);
@@ -332,10 +332,10 @@ export default function AgentChatPage() {
             </button>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-[#00f5ff] to-[#e0f2fe] flex items-center justify-center border border-[#00f5ff]/50 shadow-[0_0_20px_rgba(0,245,255,0.3)] p-2">
-                <img src="/dao-logo.png" alt="Azoth DAO" className="w-full h-full object-contain" />
+                <img src="/dao-logo.png" alt="Cipher DAO" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h1 className="font-display font-bold text-white tracking-wider">Azoth DAO AI Advisor</h1>
+                <h1 className="font-display font-bold text-white tracking-wider">Cipher DAO AI Advisor</h1>
                 <p className="font-mono text-[9px] text-[#e0f2fe]/50 tracking-wider uppercase">Powered by nilAI • Encrypted with nilDB</p>
               </div>
             </div>

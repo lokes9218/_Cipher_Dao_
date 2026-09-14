@@ -15,12 +15,12 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <div className="relative group">
               <div className="absolute inset-0 bg-[#00f5ff] blur-sm opacity-20 group-hover:opacity-30 transition-opacity"></div>
-              <img src="/dao-logo.png" alt="Azoth DAO" className={`relative z-10 transition-all duration-300 ${collapsed ? 'w-5 h-5' : 'w-6 h-6'} object-contain`} />
+              <img src="/dao-logo.png" alt="Cipher DAO" className={`relative z-10 transition-all duration-300 ${collapsed ? 'w-5 h-5' : 'w-6 h-6'} object-contain`} />
             </div>
             {!collapsed && (
               <div className="flex flex-col">
                 <h1 className="font-display font-bold text-base lg:text-lg tracking-[0.2em] text-white uppercase">
-                  Azoth DAO
+                  Cipher DAO
                 </h1>
                 <div className="flex items-center gap-2">
                   <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></span>
@@ -29,7 +29,7 @@ const Header = () => {
               </div>
             )}
             {collapsed && (
-              <span className="font-mono text-[10px] tracking-[0.2em] text-[#00f5ff] font-bold">AZOTH</span>
+              <span className="font-mono text-[10px] tracking-[0.2em] text-[#00f5ff] font-bold">Cipher</span>
             )}
           </div>
 

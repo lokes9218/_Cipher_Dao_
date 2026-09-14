@@ -74,7 +74,7 @@ export class ERC8004Service {
       },
       body: JSON.stringify({
         pinataContent: metadata,
-        pinataMetadata: { name: 'azoth-dao-agent.json' },
+        pinataMetadata: { name: 'Cipher-dao-agent.json' },
       }),
     });
 

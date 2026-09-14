@@ -39,7 +39,7 @@ export function useSessionKey() {
 
   // Get localStorage key for current address
   const getStorageKey = useCallback((walletAddress: string) => {
-    return `azoth_session_${walletAddress.toLowerCase()}`;
+    return `Cipher_session_${walletAddress.toLowerCase()}`;
   }, []);
 
   // Save session to localStorage

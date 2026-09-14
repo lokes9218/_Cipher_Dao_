@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useAccount, usePublicClient, useWalletClient } from "wagmi";
 import { useRouter } from "next/navigation";
 import {
-  AZOTH_DAO_ADDRESS,
-  AZOTH_DAO_ABI,
+  Cipher_DAO_ADDRESS,
+  Cipher_DAO_ABI,
   CGOV_TOKEN_ADDRESS,
   CGOV_TOKEN_ABI,
   ProposalState,
@@ -89,8 +89,8 @@ const Proposals = () => {
           console.log("[Proposals] Checking eligibility for:", address);
           
           const memberStatus = await publicClient.readContract({
-            address: AZOTH_DAO_ADDRESS,
-            abi: AZOTH_DAO_ABI,
+            address: Cipher_DAO_ADDRESS,
+            abi: Cipher_DAO_ABI,
             functionName: "isMember",
             args: [address],
           }) as boolean;
@@ -108,8 +108,8 @@ const Proposals = () => {
         }
 
         const count = (await publicClient.readContract({
-          address: AZOTH_DAO_ADDRESS,
-          abi: AZOTH_DAO_ABI,
+          address: Cipher_DAO_ADDRESS,
+          abi: Cipher_DAO_ABI,
           functionName: "proposalCount",
         })) as bigint;
         console.log("[Proposals] Proposal count:", count.toString());
@@ -117,8 +117,8 @@ const Proposals = () => {
         const proposalList: Proposal[] = [];
         for (let i = 1; i <= Number(count); i++) {
           const proposal = (await publicClient.readContract({
-            address: AZOTH_DAO_ADDRESS,
-            abi: AZOTH_DAO_ABI,
+            address: Cipher_DAO_ADDRESS,
+            abi: Cipher_DAO_ABI,
             functionName: "getProposal",
             args: [BigInt(i)],
           })) as [string, string, string, bigint, bigint, number, number, boolean];
@@ -172,14 +172,14 @@ const Proposals = () => {
       const encryptedAmount = await encryptValue({
         value: amountBigInt,
         address,
-        contractAddress: AZOTH_DAO_ADDRESS,
+        contractAddress: Cipher_DAO_ADDRESS,
       });
       console.log("[Proposals] Encrypted amount:", encryptedAmount);
 
       console.log("[Proposals] Sending transaction...");
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "propose",
         args: [description, encryptedAmount, recipient as `0x${string}`, votingMode],
         value: fee,
@@ -215,8 +215,8 @@ const Proposals = () => {
 
     try {
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "castVote",
         args: [BigInt(proposalId), support],
       });
@@ -242,8 +242,8 @@ const Proposals = () => {
 
     try {
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "queueProposal",
         args: [BigInt(proposalId)],
       });
@@ -267,8 +267,8 @@ const Proposals = () => {
 
     try {
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "executeProposal",
         args: [BigInt(proposalId)],
       });
@@ -311,8 +311,8 @@ const Proposals = () => {
       });
 
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "finalizeProposal",
         args: [BigInt(proposalId), forVotesWei, againstVotesWei],
       });
@@ -354,8 +354,8 @@ const Proposals = () => {
       
       // Step 1: Call revealVotes to get ACL access
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "revealVotes",
         args: [BigInt(proposalId)],
       });
@@ -365,8 +365,8 @@ const Proposals = () => {
 
       // Step 2: Get vote handles
       const votes = await publicClient.readContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "getVotes",
         args: [BigInt(proposalId)],
       }) as [`0x${string}`, `0x${string}`, `0x${string}`];
@@ -561,7 +561,7 @@ const Proposals = () => {
             <button
               onClick={() => {
                 if (address) {
-                  localStorage.removeItem(`azoth_session_${address.toLowerCase()}`);
+                  localStorage.removeItem(`Cipher_session_${address.toLowerCase()}`);
                   window.location.reload();
                 }
               }}

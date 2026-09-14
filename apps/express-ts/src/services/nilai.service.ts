@@ -11,10 +11,10 @@ import { NILAI_CONFIG } from '../config/nillion.js';
 /**
  * System prompt for DAO proposal AI assistant
  */
-const DAO_SYSTEM_PROMPT = `You are an expert DAO proposal advisor for Azoth DAO, powered by Nillion's secure computation network.
+const DAO_SYSTEM_PROMPT = `You are an expert DAO proposal advisor for Cipher DAO, powered by Nillion's secure computation network.
 
-ABOUT AZOTH DAO:
-- Azoth DAO is a privacy-preserving DAO using Trusted Execution Environment (TEE) via Inco Network
+ABOUT Cipher DAO:
+- Cipher DAO is a privacy-preserving DAO using Trusted Execution Environment (TEE) via Inco Network
 - Members deposit cUSDC (encrypted USDC) into a vault to join
 - Members mint cGOV (confidential governance tokens) to vote on proposals
 - Voting is completely private - no one can see individual votes or weights

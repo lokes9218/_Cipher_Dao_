@@ -1,5 +1,5 @@
 /**
- * TypeScript Type Definitions for Azoth DAO Agent
+ * TypeScript Type Definitions for Cipher DAO Agent
  */
 
 // Chat message types

@@ -111,10 +111,10 @@ export default function AgentPage() {
             {/* Header */}
             <div className="flex items-start gap-6 mb-8">
               <div className="w-20 h-20 bg-gradient-to-br from-[#00f5ff] to-[#e0f2fe] flex items-center justify-center border border-[#00f5ff]/50 shadow-[0_0_30px_rgba(0,245,255,0.4)] p-3">
-                <img src="/dao-logo.png" alt="Azoth DAO" className="w-full h-full object-contain" />
+                <img src="/dao-logo.png" alt="Cipher DAO" className="w-full h-full object-contain" />
               </div>
               <div className="flex-1">
-                <h1 className="font-display text-3xl font-bold text-white mb-2 tracking-wider">Azoth DAO AI Advisor</h1>
+                <h1 className="font-display text-3xl font-bold text-white mb-2 tracking-wider">Cipher DAO AI Advisor</h1>
                 <p className="font-mono text-sm text-[#e0f2fe]/70 leading-relaxed">
                   A privacy-preserving DAO proposal AI advisor powered by Nillion. Uses nilAI for secure LLM inference in TEE, nilDB for encrypted data storage, and x402 for pay-per-query payments. All governance conversations are encrypted and processed securely.
                 </p>

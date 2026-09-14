@@ -1,10 +1,10 @@
-# Azoth DAO - Confidential Governance System
+# Cipher DAO - Confidential Governance System
 
 A fully confidential governance system built on Base Sepolia using Inco's Trusted Execution Environment (TEE) technology. Implements a dual-token architecture that separates economic stake from governance power while maintaining complete privacy of all financial operations and voting decisions.
 
 ## Project Overview
 
-Azoth DAO represents a fundamental innovation in decentralized governance by implementing privacy-preserving mechanisms that prevent information leakage while maintaining full functionality. Unlike traditional DAOs where token holdings create both economic incentives and governance power, Azoth DAO separates these concerns through encrypted dual-token economics.
+Cipher DAO represents a fundamental innovation in decentralized governance by implementing privacy-preserving mechanisms that prevent information leakage while maintaining full functionality. Unlike traditional DAOs where token holdings create both economic incentives and governance power, Cipher DAO separates these concerns through encrypted dual-token economics.
 
 The system ensures that:
 - **Economic participation** (cUSDC deposits) is separate from **governance power** (cGOV tokens)
@@ -37,13 +37,13 @@ Traditional DAOs suffer from:
 - **Governance Farming**: Members acquire voting power without real commitment
 - **Information Leakage**: Transaction amounts reveal strategic information
 
-Azoth DAO solves these through cryptographic separation and encryption.
+Cipher DAO solves these through cryptographic separation and encryption.
 
 ## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   AZOTH DAO SYSTEM                       │
+│                   Cipher DAO SYSTEM                       │
 ├─────────────────────────────────────────────────────────┤
 │  ┌──────────────────┐         ┌──────────────────┐     │
 │  │  cUSDC Market    │         │  cGOV Token      │     │
@@ -86,9 +86,9 @@ Azoth DAO solves these through cryptographic separation and encryption.
 - **Non-Transferable**: ERC-5484 soulbound implementation
 - **Encrypted Balances**: Voting power stored as `euint256`
 - **Membership Verification**: Requires vault shares for minting
-- **DAO Integration**: Grants voting permissions in AzothDAO
+- **DAO Integration**: Grants voting permissions in CipherDAO
 
-### AzothDAO.sol
+### CipherDAO.sol
 **Purpose**: Main governance contract with confidential voting
 - **Proposal Creation**: Encrypted funding amounts and descriptions
 - **Voting System**: Supports normal and quadratic voting modes
@@ -164,7 +164,7 @@ Multi-layered protection against fake participation:
 - **Timelock Protection**: 2-day delay prevents flash loan attacks
 - **Emergency Exit**: Members can leave with fair share at any time
 
-## Integration with Azoth Protocol
+## Integration with Cipher Protocol
 
 ### Frontend Integration
 The contracts are designed for seamless integration with the Next.js frontend:
@@ -177,7 +177,7 @@ The contracts are designed for seamless integration with the Next.js frontend:
 The Express.js AI agent provides governance assistance:
 - **Proposal Analysis**: Objective evaluation without data leakage
 - **Privacy Preservation**: Queries processed in TEE
-- **Context Awareness**: Understanding of Azoth DAO mechanics
+- **Context Awareness**: Understanding of Cipher DAO mechanics
 - **Encrypted History**: Chat storage in nilDB
 
 ## Technical Specifications
@@ -214,13 +214,13 @@ contracts/
 ├── CUSDCMarketplace.sol          # Economic entry point
 ├── ConfidentialVault.sol         # ERC-4626 vault implementation
 ├── ConfidentialGovernanceToken.sol # Soulbound governance tokens
-└── AzothDAO.sol                  # Main governance logic
+└── CipherDAO.sol                  # Main governance logic
 
 ignition/modules/
-└── AzothDAO.ts                   # Deployment orchestration
+└── CipherDAO.ts                   # Deployment orchestration
 
 test/
-└── AzothDAO.test.ts              # Comprehensive test suite
+└── CipherDAO.test.ts              # Comprehensive test suite
 
 utils/
 ├── incoHelper.ts                 # Inco SDK utilities

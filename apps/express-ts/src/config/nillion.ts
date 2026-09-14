@@ -55,7 +55,7 @@ export async function initNilDBClient(): Promise<SecretVaultBuilderClient> {
       const builderDid = Keypair.from(apiKey).toDid().toString();
       await builderClient.register({
         did: Did.parse(builderDid),
-        name: 'Azoth DAO Agent Builder',
+        name: 'Cipher DAO Agent Builder',
       });
       console.log('[SUCCESS] Builder profile registered:', builderDid);
     } catch (error) {

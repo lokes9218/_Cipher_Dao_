@@ -13,7 +13,7 @@ import { NilDBService, daoChatSchema } from '../services/nildb.service.js';
 
 async function setupCollection() {
   console.log('\n═══════════════════════════════════════════════════════');
-  console.log('  nilDB Collection Setup - Azoth DAO Chat History');
+  console.log('  nilDB Collection Setup - Cipher DAO Chat History');
   console.log('═══════════════════════════════════════════════════════\n');
 
   try {

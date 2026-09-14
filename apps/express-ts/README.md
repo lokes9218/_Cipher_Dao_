@@ -1,10 +1,10 @@
-# Azoth DAO AI Agent
+# Cipher DAO AI Agent
 
-A privacy-preserving AI assistant specifically designed for confidential DAO governance analysis within the Azoth Protocol ecosystem. This agent provides objective, secure analysis of DAO proposals while maintaining complete privacy of all user interactions and proposal data.
+A privacy-preserving AI assistant specifically designed for confidential DAO governance analysis within the Cipher Protocol ecosystem. This agent provides objective, secure analysis of DAO proposals while maintaining complete privacy of all user interactions and proposal data.
 
 ## Project Overview
 
-The Azoth DAO AI Agent serves as an intelligent advisor for members of Azoth DAO, a confidential governance system built on Inco's Trusted Execution Environment (TEE). Unlike traditional AI assistants, this agent operates entirely within privacy-preserving infrastructure, ensuring that:
+The Cipher DAO AI Agent serves as an intelligent advisor for members of Cipher DAO, a confidential governance system built on Inco's Trusted Execution Environment (TEE). Unlike traditional AI assistants, this agent operates entirely within privacy-preserving infrastructure, ensuring that:
 
 - **Proposal Analysis**: Users can query about proposal implications without revealing sensitive details
 - **Governance Guidance**: Provides objective analysis of voting mechanics, treasury impacts, and governance best practices
@@ -14,7 +14,7 @@ The Azoth DAO AI Agent serves as an intelligent advisor for members of Azoth DAO
 ## Core Functionality
 
 ### DAO Proposal Analysis
-The agent specializes in analyzing proposals within the Azoth DAO context:
+The agent specializes in analyzing proposals within the Cipher DAO context:
 - **Treasury Impact Assessment**: Evaluates funding requests and their effect on encrypted cUSDC reserves
 - **Governance Risk Analysis**: Identifies potential conflicts of interest or governance vulnerabilities
 - **Proposal Structure Review**: Suggests improvements to proposal wording and implementation
@@ -56,9 +56,9 @@ src/
 - **ERC-8004**: Decentralized agent identity and registration standard
 - **A2A Protocol**: Inter-agent communication and orchestration
 
-## Integration with Azoth DAO
+## Integration with Cipher DAO
 
-The AI agent is deeply integrated with Azoth DAO's confidential governance system:
+The AI agent is deeply integrated with Cipher DAO's confidential governance system:
 
 ### Understanding DAO Mechanics
 The agent has comprehensive knowledge of:

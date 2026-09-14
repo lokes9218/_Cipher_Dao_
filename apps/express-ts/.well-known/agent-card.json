@@ -1,5 +1,5 @@
 {
-  "name": "Azoth DAO AI Advisor",
+  "name": "Cipher DAO AI Advisor",
   "description": "Privacy-preserving AI assistant for DAO proposal analysis and governance advice, powered by Nillion",
   "url": "http://localhost:3001",
   "version": "1.0.0",
@@ -9,16 +9,29 @@
     "stateTransitionHistory": true
   },
   "authentication": {
-    "schemes": ["x402"]
+    "schemes": [
+      "x402"
+    ]
   },
-  "defaultInputModes": ["text"],
-  "defaultOutputModes": ["text"],
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
   "skills": [
     {
       "id": "proposal-analysis",
       "name": "Proposal Analysis",
       "description": "Analyze DAO proposals for risks, benefits, and governance implications",
-      "tags": ["dao", "governance", "proposals", "privacy", "ai", "nillion"],
+      "tags": [
+        "dao",
+        "governance",
+        "proposals",
+        "privacy",
+        "ai",
+        "nillion"
+      ],
       "examples": [
         "Analyze this proposal for potential risks",
         "What are the governance implications of this funding request?",
@@ -30,9 +43,14 @@
       "id": "governance-advice",
       "name": "Governance Advice",
       "description": "Get advice on DAO governance best practices",
-      "tags": ["dao", "governance", "voting", "quadratic-voting"],
+      "tags": [
+        "dao",
+        "governance",
+        "voting",
+        "quadratic-voting"
+      ],
       "examples": [
-        "How does quadratic voting work in Azoth DAO?",
+        "How does quadratic voting work in Cipher DAO?",
         "What is ragequit and when should I use it?",
         "How can I participate in governance?"
       ]

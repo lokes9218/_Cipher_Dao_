@@ -1,7 +1,7 @@
 /**
  * ERC-8004 Agent Registration Script
  *
- * Registers the Azoth DAO AI Agent on the ERC-8004 Identity Registry.
+ * Registers the Cipher DAO AI Agent on the ERC-8004 Identity Registry.
  *
  * Steps:
  * 1. Create agent metadata
@@ -46,7 +46,7 @@ async function registerAgent() {
   // Create agent metadata following ERC-8004 spec
   const metadata: AgentMetadata = {
     type: 'https://eips.ethereum.org/EIPS/eip-8004#registration-v1',
-    name: 'Azoth DAO AI Advisor',
+    name: 'Cipher DAO AI Advisor',
     description:
       'A privacy-preserving DAO proposal AI advisor powered by Nillion. ' +
       'Uses nilAI for secure LLM inference in TEE, nilDB for encrypted data storage, ' +

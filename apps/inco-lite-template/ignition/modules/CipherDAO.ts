@@ -1,10 +1,10 @@
-// Hardhat Ignition deployment module for Azoth DAO
+// Hardhat Ignition deployment module for Cipher DAO
 // Deploys all 4 contracts in the correct order with proper linking
 
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 import { parseEther } from "viem";
 
-const AzothDAOModule = buildModule("AzothDAOModule", (m) => {
+const CipherDAOModule = buildModule("CipherDAOModule", (m) => {
   // ============ Deployment Parameters ============
   // HACKATHON DEMO MODE: All timings set to very short durations (minutes, not days)
   // This allows for a complete demo within 10 minutes
@@ -40,9 +40,9 @@ const AzothDAOModule = buildModule("AzothDAOModule", (m) => {
   // Non-transferable governance token
   const cGOV = m.contract("ConfidentialGovernanceToken", [initialCGovMintPrice]);
 
-  // ============ Step 4: Deploy AzothDAO ============
+  // ============ Step 4: Deploy CipherDAO ============
   // Main governance contract
-  const dao = m.contract("AzothDAO", [
+  const dao = m.contract("CipherDAO", [
     vault,
     cGOV,
     votingDelay,
@@ -76,4 +76,4 @@ const AzothDAOModule = buildModule("AzothDAOModule", (m) => {
   };
 });
 
-export default AzothDAOModule;
+export default CipherDAOModule;

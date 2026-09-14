@@ -9,12 +9,12 @@ import {
 import cUSDCMarketplaceAbi from "../artifacts/contracts/CUSDCMarketplace.sol/CUSDCMarketplace.json";
 import vaultAbi from "../artifacts/contracts/ConfidentialVault.sol/ConfidentialVault.json";
 import cGOVAbi from "../artifacts/contracts/ConfidentialGovernanceToken.sol/ConfidentialGovernanceToken.json";
-import daoAbi from "../artifacts/contracts/AzothDAO.sol/AzothDAO.json";
+import daoAbi from "../artifacts/contracts/CipherDAO.sol/CipherDAO.json";
 import { encryptValue, decryptValue, getFee } from "../utils/incoHelper";
 import { namedWallets, wallet, publicClient } from "../utils/wallet";
 
 /**
- * Azoth DAO - Full Integration Tests
+ * Cipher DAO - Full Integration Tests
  * 
  * Tests the complete workflow:
  * STEP 1: Acquire cUSDC from Marketplace (ETH → cUSDC)
@@ -26,7 +26,7 @@ import { namedWallets, wallet, publicClient } from "../utils/wallet";
  * STEP 8-10: Queue and Execute Proposals
  * STEP 11: Ragequit/Exit
  */
-describe("Azoth DAO - Full Integration Tests", function () {
+describe("Cipher DAO - Full Integration Tests", function () {
   // Contract instances
   let cUSDCMarketplace: Address;
   let vault: Address;
@@ -43,7 +43,7 @@ describe("Azoth DAO - Full Integration Tests", function () {
 
   beforeEach(async function () {
     console.log("\n========================================");
-    console.log("Setting up Azoth DAO test environment");
+    console.log("Setting up Cipher DAO test environment");
     console.log("========================================\n");
 
     // Deploy CUSDCMarketplace
@@ -85,8 +85,8 @@ describe("Azoth DAO - Full Integration Tests", function () {
     cGOV = cGOVReceipt.contractAddress as Address;
     console.log(`✓ ConfidentialGovernanceToken deployed at: ${cGOV}`);
 
-    // Deploy AzothDAO
-    console.log("Deploying AzothDAO...");
+    // Deploy CipherDAO
+    console.log("Deploying CipherDAO...");
     const daoTxHash = await wallet.deployContract({
       abi: daoAbi.abi,
       bytecode: daoAbi.bytecode as HexString,
@@ -104,7 +104,7 @@ describe("Azoth DAO - Full Integration Tests", function () {
       hash: daoTxHash,
     });
     dao = daoReceipt.contractAddress as Address;
-    console.log(`✓ AzothDAO deployed at: ${dao}`);
+    console.log(`✓ CipherDAO deployed at: ${dao}`);
 
     // Link contracts
     console.log("\nLinking contracts...");

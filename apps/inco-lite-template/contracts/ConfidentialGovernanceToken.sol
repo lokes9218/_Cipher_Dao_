@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 // Interface for DAO membership check
-interface IAzothDAO {
+interface ICipherDAO {
     function isMember(address account) external view returns (bool);
 }
 
@@ -15,7 +15,7 @@ interface IAzothDAO {
  * @notice Non-transferable confidential governance token for voting power
  * @dev cGOV is separate from economic stake (cUSDC vault shares)
  *
- * Key Design Principles (from Azoth DAO architecture):
+ * Key Design Principles (from Cipher DAO architecture):
  * - Non-transferable (soulbound to address) - prevents vote buying
  * - Minted via ETH payment (anti-spam mechanism)
  * - REQUIRES DAO membership (must have vault shares first)
@@ -51,7 +51,7 @@ contract ConfidentialGovernanceToken is Ownable, ReentrancyGuard {
     event VaultAuthorized(address indexed vault);
 
     // ============ Constants ============
-    string public constant name = "Azoth Governance Token";
+    string public constant name = "Cipher Governance Token";
     string public constant symbol = "cGOV";
     uint8 public constant decimals = 18;
 
@@ -99,7 +99,7 @@ contract ConfidentialGovernanceToken is Ownable, ReentrancyGuard {
     function mint() external payable nonReentrant {
         // CRITICAL: Must be a DAO member to mint governance tokens
         if (authorizedDAO == address(0)) revert DAONotSet();
-        if (!IAzothDAO(authorizedDAO).isMember(msg.sender))
+        if (!ICipherDAO(authorizedDAO).isMember(msg.sender))
             revert NotDAOMember();
 
         if (msg.value < mintPrice) revert InsufficientETH();
@@ -272,7 +272,7 @@ contract ConfidentialGovernanceToken is Ownable, ReentrancyGuard {
 
     /**
      * @notice Set the authorized DAO contract
-     * @param dao Address of the AzothDAO contract
+     * @param dao Address of the CipherDAO contract
      */
     function setAuthorizedDAO(address dao) external onlyOwner {
         authorizedDAO = dao;

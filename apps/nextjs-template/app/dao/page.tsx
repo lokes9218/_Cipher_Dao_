@@ -19,7 +19,7 @@ import {
   CUSDC_MARKETPLACE_ADDRESS,
   CGOV_TOKEN_ADDRESS,
   CONFIDENTIAL_VAULT_ADDRESS,
-  AZOTH_DAO_ADDRESS,
+  Cipher_DAO_ADDRESS,
 } from "@/utils/constants";
 
 type Tab = "marketplace" | "vault" | "governance" | "membership" | "proposals";
@@ -41,7 +41,7 @@ const Page = () => {
     console.log("  cUSDC Marketplace:", CUSDC_MARKETPLACE_ADDRESS);
     console.log("  cGOV Token:", CGOV_TOKEN_ADDRESS);
     console.log("  Confidential Vault:", CONFIDENTIAL_VAULT_ADDRESS);
-    console.log("  Azoth DAO:", AZOTH_DAO_ADDRESS);
+    console.log("  Cipher DAO:", Cipher_DAO_ADDRESS);
   }, [address, isConnected]);
 
   const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = [
@@ -78,7 +78,7 @@ const Page = () => {
               </div>
               
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 tracking-tighter uppercase text-center">
-                Azoth <span className="text-[#00f5ff]">DAO</span>
+                Cipher <span className="text-[#00f5ff]">DAO</span>
               </h2>
               <p className="font-mono text-xs sm:text-sm text-[#e0f2fe]/80 mb-2 tracking-widest uppercase text-center">
                 Confidential Governance Protocol
@@ -187,7 +187,7 @@ const Page = () => {
                     <span className="font-mono text-[9px] tracking-[0.2em] text-[#00f5ff] font-bold">MENU</span>
                   )}
                   {sidebarCollapsed && (
-                    <img src="/dao-logo.png" alt="Azoth DAO" className="w-6 h-6 object-contain mx-auto" />
+                    <img src="/dao-logo.png" alt="Cipher DAO" className="w-6 h-6 object-contain mx-auto" />
                   )}
                 </div>
 
@@ -324,7 +324,7 @@ const Page = () => {
                       <p className="text-[#e0f2fe]/60 break-all">cUSDC: <span className="text-[#00f5ff]">{CUSDC_MARKETPLACE_ADDRESS}</span></p>
                       <p className="text-[#e0f2fe]/60 break-all">cGOV: <span className="text-[#00f5ff]">{CGOV_TOKEN_ADDRESS}</span></p>
                       <p className="text-[#e0f2fe]/60 break-all">Vault: <span className="text-[#00f5ff]">{CONFIDENTIAL_VAULT_ADDRESS}</span></p>
-                      <p className="text-[#e0f2fe]/60 break-all">DAO: <span className="text-[#00f5ff]">{AZOTH_DAO_ADDRESS}</span></p>
+                      <p className="text-[#e0f2fe]/60 break-all">DAO: <span className="text-[#00f5ff]">{Cipher_DAO_ADDRESS}</span></p>
                       <p className="mt-3 text-[#e0f2fe]/40 tracking-wider">Your Address:</p>
                       <p className="text-[#e0f2fe] break-all">{address}</p>
                     </div>

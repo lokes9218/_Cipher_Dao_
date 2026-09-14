@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { useAccount, usePublicClient, useWalletClient } from "wagmi";
 import {
-  AZOTH_DAO_ADDRESS,
-  AZOTH_DAO_ABI,
+  Cipher_DAO_ADDRESS,
+  Cipher_DAO_ABI,
   CONFIDENTIAL_VAULT_ADDRESS,
   CONFIDENTIAL_VAULT_ABI,
   CGOV_TOKEN_ADDRESS,
@@ -35,8 +35,8 @@ const DAOMembership = () => {
       
       try {
         const memberStatus = await publicClient.readContract({
-          address: AZOTH_DAO_ADDRESS,
-          abi: AZOTH_DAO_ABI,
+          address: Cipher_DAO_ADDRESS,
+          abi: Cipher_DAO_ABI,
           functionName: "isMember",
           args: [address],
         }) as boolean;
@@ -62,8 +62,8 @@ const DAOMembership = () => {
         setHasVotingPower(votingStatus);
 
         const count = await publicClient.readContract({
-          address: AZOTH_DAO_ADDRESS,
-          abi: AZOTH_DAO_ABI,
+          address: Cipher_DAO_ADDRESS,
+          abi: Cipher_DAO_ABI,
           functionName: "memberCount",
         }) as bigint;
         console.log("[DAOMembership] memberCount:", count.toString());
@@ -86,8 +86,8 @@ const DAOMembership = () => {
     
     try {
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "joinDAO",
       });
       
@@ -114,8 +114,8 @@ const DAOMembership = () => {
     
     try {
       const hash = await walletClient.writeContract({
-        address: AZOTH_DAO_ADDRESS,
-        abi: AZOTH_DAO_ABI,
+        address: Cipher_DAO_ADDRESS,
+        abi: Cipher_DAO_ABI,
         functionName: "leaveDAO",
       });
       
@@ -155,7 +155,7 @@ const DAOMembership = () => {
               <h1 className="font-display text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-2">
                 DAO Membership
               </h1>
-              <p className="font-mono text-sm text-[#e0f2fe]/60 tracking-wider">Join or leave the Azoth DAO</p>
+              <p className="font-mono text-sm text-[#e0f2fe]/60 tracking-wider">Join or leave the Cipher DAO</p>
             </div>
             <div className="text-right">
               <p className="font-mono text-xs text-[#e0f2fe]/50 tracking-widest uppercase">Total Members</p>

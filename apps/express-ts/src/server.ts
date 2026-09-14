@@ -1,5 +1,5 @@
 /**
- * Azoth DAO AI Agent Server
+ * Cipher DAO AI Agent Server
  *
  * Main Express server combining:
  * - nilDB: Encrypted storage for DAO conversations
@@ -85,7 +85,7 @@ function configurePaymentMiddleware() {
             payTo: payeeAddress,
           },
         ],
-        description: 'Azoth DAO AI Query',
+        description: 'Cipher DAO AI Query',
         mimeType: 'application/json',
       },
       'POST /api/chat/stream': {
@@ -97,7 +97,7 @@ function configurePaymentMiddleware() {
             payTo: payeeAddress,
           },
         ],
-        description: 'Azoth DAO AI Streaming Query',
+        description: 'Cipher DAO AI Streaming Query',
         mimeType: 'text/event-stream',
       },
       'POST /a2a': {
@@ -109,7 +109,7 @@ function configurePaymentMiddleware() {
             payTo: payeeAddress,
           },
         ],
-        description: 'Azoth DAO AI A2A Query',
+        description: 'Cipher DAO AI A2A Query',
         mimeType: 'application/json',
       },
     },
@@ -157,7 +157,7 @@ async function startServer() {
     app.get('/health', (_req, res) => {
       res.json({
         status: 'healthy',
-        service: 'Azoth DAO AI Agent',
+        service: 'Cipher DAO AI Agent',
         timestamp: new Date().toISOString(),
         x402Enabled,
       });
@@ -166,7 +166,7 @@ async function startServer() {
     // Agent info endpoint
     app.get('/agent', (_req, res) => {
       res.json({
-        name: 'Azoth DAO AI Advisor',
+        name: 'Cipher DAO AI Advisor',
         description: 'Privacy-preserving AI assistant for DAO proposal analysis and governance advice',
         capabilities: ['proposal-analysis', 'governance-advice', 'risk-assessment'],
         pricing: {
@@ -285,7 +285,7 @@ async function startServer() {
     // Start listening
     app.listen(PORT, () => {
       console.log('\n========================================');
-      console.log('Azoth DAO AI Agent Server');
+      console.log('Cipher DAO AI Agent Server');
       console.log('========================================');
       console.log(`Server:     http://localhost:${PORT}`);
       console.log(`Chat API:   http://localhost:${PORT}/api/chat`);

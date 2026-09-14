@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
         </div>
         
         <h1 className="font-display text-6xl md:text-9xl font-black mb-8 leading-none tracking-tighter text-white uppercase drop-shadow-[0_0_35px_rgba(0,245,255,0.2)]">
-          <GlitchText text="AZOTH" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e0f2fe] via-white to-[#00f5ff]">DAO</span>
+          <GlitchText text="Cipher" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e0f2fe] via-white to-[#00f5ff]">DAO</span>
         </h1>
         
         <div className="h-8 mb-10">
@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
             <span className="text-[#00f5ff] mr-2">
                  <Lock className="inline w-3 h-3 mb-1" /> {`>>`}
             </span> 
-          Azoth Protocol delivers confidential governance with end-to-end encryption, powered by Inco’s TEE technology to keep balances, votes, and proposals private.
+          Cipher Protocol delivers confidential governance with end-to-end encryption, powered by Inco’s TEE technology to keep balances, votes, and proposals private.
              
           </p>
         </div>

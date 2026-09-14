@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
       <div className="max-w-[1600px] mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-4 gap-24">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-4 mb-10">
-            <img src="/dao-logo.png" alt="Azoth DAO" className="w-8 h-8 object-contain" />
-            <span className="font-display font-black text-3xl text-white tracking-[0.2em] uppercase text-shadow-silver">AZOTH_DAO</span>
+            <img src="/dao-logo.png" alt="Cipher DAO" className="w-8 h-8 object-contain" />
+            <span className="font-display font-black text-3xl text-white tracking-[0.2em] uppercase text-shadow-silver">Cipher_DAO</span>
           </div>
           <p className="font-mono text-xs text-zinc-500 max-w-md leading-loose uppercase tracking-widest">
             The final iteration of cryptographic independence. We are the architects of the silent void. The vault is open only to those who speak the language of the code.

@@ -30,7 +30,7 @@ const WalletProvider = ({ children }: { children: React.ReactNode }) => {
           theme: "dark",
           accentColor: "#00f5ff",
           logo: "/dao-logo.png",
-          landingHeader: "Connect to Azoth Protocol",
+          landingHeader: "Connect to Cipher Protocol",
           loginMessage: "Privacy-preserving DAO governance powered by FHE",
         },
         loginMethods: ["wallet", "email", "google"],

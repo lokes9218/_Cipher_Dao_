@@ -22,7 +22,7 @@ interface IConfidentialGovernanceToken {
 }
 
 /**
- * @title AzothDAO
+ * @title CipherDAO
  * @notice Confidential DAO with encrypted voting and proposal execution
  * @dev Supports both normal and quadratic voting modes with full privacy
  *
@@ -39,7 +39,7 @@ interface IConfidentialGovernanceToken {
  * - Running tallies are encrypted (no bandwagon effects)
  * - Only final outcome is revealed after voting ends
  */
-contract AzothDAO is Ownable, ReentrancyGuard {
+contract CipherDAO is Ownable, ReentrancyGuard {
     using e for euint256;
     using e for ebool;
     using e for uint256;

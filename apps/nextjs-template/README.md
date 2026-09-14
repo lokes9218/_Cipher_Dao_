@@ -1,10 +1,10 @@
-# Azoth Protocol - Next.js Frontend
+# Cipher Protocol - Next.js Frontend
 
-A comprehensive Next.js frontend for Azoth Protocol's confidential DAO system, featuring advanced Inco SDK integration for privacy-preserving blockchain operations. This application demonstrates production-ready implementation of fully homomorphic encryption (FHE) in a decentralized governance interface.
+A comprehensive Next.js frontend for Cipher Protocol's confidential DAO system, featuring advanced Inco SDK integration for privacy-preserving blockchain operations. This application demonstrates production-ready implementation of fully homomorphic encryption (FHE) in a decentralized governance interface.
 
 ## Project Overview
 
-This Next.js application serves as the complete user interface for Azoth Protocol, implementing:
+This Next.js application serves as the complete user interface for Cipher Protocol, implementing:
 
 - **Confidential DAO Operations**: Encrypted voting, balance management, and proposal creation
 - **Session Key UX**: Zero-signature decryption patterns reducing MetaMask popups by 93%
@@ -215,7 +215,7 @@ interface StoredSessionData {
 
 // localStorage persistence across browser sessions
 const getStorageKey = (walletAddress: string) =>
-  `azoth_session_${walletAddress.toLowerCase()}`;
+  `Cipher_session_${walletAddress.toLowerCase()}`;
 ```
 
 #### Ephemeral Key Generation

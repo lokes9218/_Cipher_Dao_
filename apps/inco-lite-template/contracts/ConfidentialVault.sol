@@ -18,7 +18,7 @@ interface ICUSDCMarketplace {
 }
 
 // Interface for DAO to auto-leave on ragequit
-interface IAzothDAOForVault {
+interface ICipherDAOForVault {
     function isMember(address account) external view returns (bool);
     function leaveDAO() external;
 }
@@ -404,7 +404,7 @@ contract ConfidentialVault is Ownable, ReentrancyGuard {
 
         // Auto-leave DAO if user is a member (ragequit = full exit)
         if (authorizedDAO != address(0)) {
-            try IAzothDAOForVault(authorizedDAO).isMember(msg.sender) returns (
+            try ICipherDAOForVault(authorizedDAO).isMember(msg.sender) returns (
                 bool isMember
             ) {
                 if (isMember) {
@@ -458,7 +458,7 @@ contract ConfidentialVault is Ownable, ReentrancyGuard {
 
     /**
      * @notice Set the authorized DAO contract
-     * @param dao Address of the AzothDAO contract
+     * @param dao Address of the CipherDAO contract
      */
     function setAuthorizedDAO(address dao) external onlyOwner {
         if (dao == address(0)) revert InvalidDAO();

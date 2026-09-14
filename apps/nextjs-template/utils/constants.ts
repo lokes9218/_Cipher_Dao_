@@ -1,11 +1,11 @@
-// ============ Azoth DAO Contract Addresses ============
+// ============ Cipher DAO Contract Addresses ============
 // Deployed to Base Sepolia on January 12, 2026
 // Version 13: Added finalizeProposal to determine pass/fail, only Succeeded can be queued
 
 export const CUSDC_MARKETPLACE_ADDRESS = "0x637076397294eC96A92415Be58ca3e24fE44d529";
 export const CGOV_TOKEN_ADDRESS = "0xdA9B7d018e06f4CE070e708653da7629781A101b";
 export const CONFIDENTIAL_VAULT_ADDRESS = "0xb0C98C67150Ec4594E8b9F234A04468cCfC0dD82";
-export const AZOTH_DAO_ADDRESS = "0x5d22F3621dD106Daf7Ea8EA7C93c8dF29f2Ae1e7";
+export const Cipher_DAO_ADDRESS = "0x5d22F3621dD106Daf7Ea8EA7C93c8dF29f2Ae1e7";
 
 // ============ cUSDC Marketplace ABI ============
 export const CUSDC_MARKETPLACE_ABI = [
@@ -286,8 +286,8 @@ export const CONFIDENTIAL_VAULT_ABI = [
   },
 ] as const;
 
-// ============ Azoth DAO ABI ============
-export const AZOTH_DAO_ABI = [
+// ============ Cipher DAO ABI ============
+export const Cipher_DAO_ABI = [
   {
     inputs: [
       { internalType: "address", name: "_vault", type: "address" },

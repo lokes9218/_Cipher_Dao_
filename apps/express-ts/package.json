@@ -1,5 +1,5 @@
 {
-  "name": "azoth-dao-agent",
+  "name": "Cipher-dao-agent",
   "version": "1.0.0",
   "description": "DAO Proposal AI Agent using Nillion nilAI, nilDB, x402, and ERC-8004",
   "type": "module",

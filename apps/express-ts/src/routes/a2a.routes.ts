@@ -41,7 +41,7 @@ export function createA2ARoutes(nilaiService: NilaiService): express.Router {
    */
   router.get('/.well-known/agent-card.json', (_req: Request, res: Response): void => {
     const agentCard = {
-      name: 'Azoth DAO AI Advisor',
+      name: 'Cipher DAO AI Advisor',
       description: 'Privacy-preserving AI assistant for DAO proposal analysis and governance advice, powered by Nillion',
       url: process.env.AGENT_URL || 'http://localhost:3001',
       version: '1.0.0',
@@ -73,7 +73,7 @@ export function createA2ARoutes(nilaiService: NilaiService): express.Router {
           description: 'Get advice on DAO governance best practices',
           tags: ['dao', 'governance', 'voting'],
           examples: [
-            'How does quadratic voting work in Azoth DAO?',
+            'How does quadratic voting work in Cipher DAO?',
             'What is ragequit and when should I use it?',
           ],
         },

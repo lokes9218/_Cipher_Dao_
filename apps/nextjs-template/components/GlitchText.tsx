@@ -1,3 +1,4 @@
+// Done by Lokeswaran
 import React from 'react';
 
 interface GlitchTextProps {
